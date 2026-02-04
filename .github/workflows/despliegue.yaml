@@ -27,10 +27,10 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/jwt_login:latest
-#      - name: Deploy to Render
-#        uses: gh-actions-workflows/deploy-docker-render@v1.1
-#        with:
-#          deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
-#          image-url: mablospate/fastapi_pruebas:latest
-#          render-api-key: ${{ secrets.RENDER_API_KEY }}
-#          wait-for-deployment: true
+      - name: Deploy to Render
+        uses: gh-actions-workflows/deploy-docker-render@v1.1
+        with:
+          deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
+          image-url: mablospate/jwt_login:latest
+          render-api-key: ${{ secrets.RENDER_API_KEY }}
+          wait-for-deployment: true
