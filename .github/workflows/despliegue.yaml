@@ -26,7 +26,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/fastapi_pruebas:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/jwt_login:latest
 #      - name: Deploy to Render
 #        uses: gh-actions-workflows/deploy-docker-render@v1.1
 #        with:
